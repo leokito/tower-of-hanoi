@@ -1,7 +1,6 @@
 // const button = document.getElementById("teste");
 // button.addEventListener("click", function () {
 //    temCoisa()
-
 // });
 
 // // // if (tower1 .childElementCount > 0) { //pega a contagem de elementos filhos
@@ -39,4 +38,45 @@
 // }
 
 // window.addEventListener("load", iniciar, false)
+// let taken;
+// let origem;
+// let destino;
+
+// function selOrDes(tower) {
+//     if (origem === undefined) {
+//         if (tower.childElementCount > 0) {
+//         origem = tower;
+//         }
+//     } else if(origem != undefined && destino == undefined) {
+//         if(origem != destino) {
+//             if()
+//         }
+//     }
+    
+// }
+
+// function disks() {
+
+// }
+// const tower = document.getElementsByClassName("tower")
+
+// tower.addEventListener("click", function() {
+//     selecionar();
+// });
+
+// function selecionar(){
+//     let tower = document.getElementsByClassName("tower")
+//     tower.removeChild(tower.lastChild)
+// }
+
+// const button = document.getElementById("teste");
+// button.addEventListener("click", function () {
+// //    temCoisa()
+//     selecionar();
+// });
+
+// function select() {
+//     let sel = document.getElementById("tower1")
+//     sel.removeChild(sel.lastChild)
+// }
 
