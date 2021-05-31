@@ -13,8 +13,10 @@ body {
 .tower {
     display: flex;
     flex-direction: column-reverse;
-    width: 30%;
+    width: 25%;
     align-items: center;
+    border: solid black 2px;
+    margin-left: 2%;
 }
 
 #disc3 {
