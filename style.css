@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    width: 100%;
+}
+
+.tower {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 30%;
+    align-items: center;
+}
+
+#disc3 {
+    background-color: slategray;
+    width: 100px;
+    height: 20px;
+}
+
+#disc2 {
+    background-color: palevioletred;
+    width: 75px;
+    height: 20px;
+}
+
+#disc1 {
+    background-color: peachpuff;
+    width: 50px;
+    height: 20px;
+}
