@@ -1,42 +1,117 @@
-// const button = document.getElementById("teste");
-// button.addEventListener("click", function () {
-//    temCoisa()
+//criação dos elementos //
+let largeContainer = document.getElementById('container')
+let torre1 = document.createElement('div');
+    torre1.classList.add('towers');
+    torre1.id = 'tower1';
+    largeContainer.appendChild(torre1);
 
-// });
+let torre2 = document.createElement('div');
+    torre2.classList.add('towers');
+    torre2.id = 'tower2';
+    largeContainer.appendChild(torre2);
 
-// // // if (tower1 .childElementCount > 0) { //pega a contagem de elementos filhos
-// // //     count = tower1.childElementCount; //se houver variavel, guarda na variavel qual a contagem;
-// // //     alert(count)
-// // //     }
-// // // }
-// let body;
+let torre3 = document.createElement('div');
+    torre3.classList.add('towers');
+    torre3.id = 'tower3';
+    largeContainer.appendChild(torre3);
 
+let disc4 = document.createElement('div');
+    disc4.classList.add('discs');
+    disc4.id = 'disc4';
+    torre1.appendChild(disc4);
 
-// function criarDiv() {
-//     let tower = document.createElement("div")
-//     return tower;
-// }
+let disc3 = document.createElement('div');
+    disc3.classList.add('discs');
+    disc3.id = 'disc3';
+    torre1.appendChild(disc3);
 
-// let tower1 = new Torre()
-// let tower2 = new Torre()
-// let tower3 = new Torre()
+let disc2 = document.createElement('div');
+    disc2.classList.add('discs');
+    disc2.id = 'disc2';
+    torre1.appendChild(disc2);
 
-// function Torre() {
-//     this.tower = criarDiv();
-//     this.tower.style.width = "25%";
-//     this.tower.style.height = "50px"
-//     this.tower.style.border = "solid green"
-//     this.tower.style.marginLeft =  "4%"
-//     this.tower.style.borderWidth = "2%"
-//     this.tower.style.float = "left"
-// }
+let disc1 = document.createElement('div');
+    disc1.classList.add('discs');
+    disc1.id = 'disc1';
+    torre1.appendChild(disc1);
 
-// function iniciar() {
-//     body = document.getElementsByName("body")[0];
-//     body.appendChild(tower1.Torre)
-//     body.appendChild(tower2.Torre)
-//     body.appendChild(tower3.Torre)
-// }
+let discoAtual
+let discoWidth1
+let discoWidth2
+let selection
 
-// window.addEventListener("load", iniciar, false)
+const discos = document.getElementsByClassName("discs");
 
+let torreAnterior 
+let hand = ""
+
+const setTorreAtual = (event) => {
+    if(hand === "") {
+        hand = "disco"
+    } else {
+        hand = "torre"
+    }
+
+    let torreDisc = event.currentTarget
+    let discNum = torreDisc.childElementCount
+    let torreAtual = torreDisc.id
+
+    if(hand === "disco"){
+        discoAtual = torreDisc.lastElementChild
+        if (discoAtual === null) {
+            hand = ""
+        }else {
+            discoWidth1 = discoAtual.clientWidth
+            torreAnterior = torreAtual
+            
+        }
+    }
+    if(hand === "torre") {
+        if(discNum !== 0) {
+            let topDisc = torreDisc.lastElementChild
+            discoWidth2 = topDisc.clientWidth
+        }
+
+        if(discNum === 0 || discoWidth1 < discoWidth2) {
+            torreDisc.appendChild(discoAtual)
+            hand = ""
+        }
+        else if(discNum === 0 || discoWidth1 > discoWidth2) {
+            alert("Jogada Inválida")
+            hand = ""
+        }
+
+    }
+
+    verificarVitoria()
+}
+
+const tower1 = document.getElementById("tower1");
+tower1.addEventListener("click", setTorreAtual);
+const tower2 = document.getElementById("tower2");
+tower2.addEventListener("click", setTorreAtual);
+const tower3 = document.getElementById("tower3");
+tower3.addEventListener("click", setTorreAtual);
+
+function verificarVitoria() {
+    let ultimaTorre = document.getElementById("tower3")
+
+    let blocos = ultimaTorre.childElementCount
+    if(blocos === 4){
+        let rickRoll = document.querySelector(".victory")
+        let video = document.querySelector("video")
+        rickRoll.classList.toggle("active");
+        video.play();
+        video.currentTime = 0;
+    
+    }
+}
+
+function desligar() {
+    let rickRoll = document.querySelector(".victory")
+    let video = document.querySelector("video")
+    rickRoll.classList.toggle("active");
+    video.pause();
+    video.currentTime = 0;
+    document.location.reload()
+}
