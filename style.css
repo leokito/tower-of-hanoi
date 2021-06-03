@@ -233,6 +233,78 @@ img#reset:hover {
         height: 40px;
     }
 }
+
+@media (min-width: 1500px) {
+    @media (min-width: 768px) {
+    
+        img#reset {
+            display: none;
+            width: 40px;
+            height: 40px;
+            margin: 0 auto;
+            margin-top: 10%;
+            padding: 5px 10px;
+            border-radius: 10px;
+            background-color: lightgray;
+        }
+        img#reset:hover {
+            background-color: lightyellow;
+        }
+        .largeContainer {
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 0 auto;
+            height: 400px;
+            width: 80%;
+        }
+        .towers {
+            display: flex;
+            flex-direction: column-reverse;
+            width: 25%;
+            height: 350px;
+            border-radius: 10%;
+            align-items: center;
+            margin-top: 10%;
+            background-color: lightgray;
+        }
+    
+        .towers:hover {
+            background-color: lightyellow;}
+    
+        .discs {
+            border-radius: 25px;
+        }
+        .discs:hover {
+            border: solid 1px white;
+    
+        }
+    
+        #disc4 {
+            background-color: rgb(107, 68, 235);
+            width: 80%;
+            height: 40px;
+        }
+        #disc3 {
+            background-color: slategray;
+            width: 65%;
+            height: 40px;
+        }
+        #disc2 {
+            background-color: palevioletred;
+            width: 50%;
+            height: 40px;
+        }
+        #disc1 {
+            background-color: peachpuff;
+            width: 30%;
+            height: 40px;
+        }
+    }
+
+}
+
 .victory {
     position: fixed;
     top: 50%;
