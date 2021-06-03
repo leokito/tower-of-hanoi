@@ -235,8 +235,7 @@ img#reset:hover {
 }
 
 @media (min-width: 1500px) {
-    @media (min-width: 768px) {
-    
+
         img#reset {
             display: none;
             width: 40px;
