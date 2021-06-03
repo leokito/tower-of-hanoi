@@ -3,34 +3,63 @@ body {
     flex-direction: column;
 }
 
+h1 {
+    text-align: center;
+}
+
+button {
+    margin-top: 30px;
+    align-self: center;
+    max-width: 20%;
+}
+
 .container {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     height: 300px;
     width: 100%;
 }
 
-.tower {
+.towers {
     display: flex;
     flex-direction: column-reverse;
     width: 30%;
     align-items: center;
+    background-color: lightgray;
+}
+
+.discs {
+    border-radius: 25px;
+}
+
+#disc4 {
+    background-color: rgb(107, 68, 235);
+    width: 90%;
+    height: 40px;
 }
 
 #disc3 {
     background-color: slategray;
-    width: 100px;
-    height: 20px;
+    width: 70%;
+    height: 40px;
 }
 
 #disc2 {
     background-color: palevioletred;
-    width: 75px;
-    height: 20px;
+    width: 50%;
+    height: 40px;
 }
 
 #disc1 {
     background-color: peachpuff;
-    width: 50px;
-    height: 20px;
+    width: 30%;
+    height: 40px;
+}
+
+.clickClass {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-end;
 }
