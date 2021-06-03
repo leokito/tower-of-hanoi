@@ -93,3 +93,25 @@ tower2.addEventListener("click", setTorreAtual);
 const tower3 = document.getElementById("tower3");
 tower3.addEventListener("click", setTorreAtual);
 
+function verificarVitoria() {
+    let ultimaTorre = document.getElementById("tower3")
+
+    let blocos = ultimaTorre.childElementCount
+    if(blocos === 4){
+        let rickRoll = document.querySelector(".victory")
+        let video = document.querySelector("video")
+        rickRoll.classList.toggle("active");
+        video.play();
+        video.currentTime = 0;
+    
+    }
+}
+
+function desligar() {
+    let rickRoll = document.querySelector(".victory")
+    let video = document.querySelector("video")
+    rickRoll.classList.toggle("active");
+    video.pause();
+    video.currentTime = 0;
+    document.location.reload()
+}
