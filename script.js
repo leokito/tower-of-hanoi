@@ -1,39 +1,40 @@
-//criação dos elementos //
-let largeContainer = document.getElementById('container')
-let torre1 = document.createElement('div');
-    torre1.classList.add('towers');
-    torre1.id = 'tower1';
-    largeContainer.appendChild(torre1);
+function game(){
+    let largeContainer = document.getElementById('container')
+    let torre1 = document.createElement('div');
+        torre1.classList.add('towers');
+        torre1.id = 'tower1';
+        largeContainer.appendChild(torre1);
+    
+    let torre2 = document.createElement('div');
+        torre2.classList.add('towers');
+        torre2.id = 'tower2';
+        largeContainer.appendChild(torre2);
+    
+    let torre3 = document.createElement('div');
+        torre3.classList.add('towers');
+        torre3.id = 'tower3';
+        largeContainer.appendChild(torre3);
+    
+    let disc4 = document.createElement('div');
+        disc4.classList.add('discs');
+        disc4.id = 'disc4';
+        torre1.appendChild(disc4);
+    
+    let disc3 = document.createElement('div');
+        disc3.classList.add('discs');
+        disc3.id = 'disc3';
+        torre1.appendChild(disc3);
+    
+    let disc2 = document.createElement('div');
+        disc2.classList.add('discs');
+        disc2.id = 'disc2';
+        torre1.appendChild(disc2);
+    
+    let disc1 = document.createElement('div');
+        disc1.classList.add('discs');
+        disc1.id = 'disc1';
+        torre1.appendChild(disc1);
 
-let torre2 = document.createElement('div');
-    torre2.classList.add('towers');
-    torre2.id = 'tower2';
-    largeContainer.appendChild(torre2);
-
-let torre3 = document.createElement('div');
-    torre3.classList.add('towers');
-    torre3.id = 'tower3';
-    largeContainer.appendChild(torre3);
-
-let disc4 = document.createElement('div');
-    disc4.classList.add('discs');
-    disc4.id = 'disc4';
-    torre1.appendChild(disc4);
-
-let disc3 = document.createElement('div');
-    disc3.classList.add('discs');
-    disc3.id = 'disc3';
-    torre1.appendChild(disc3);
-
-let disc2 = document.createElement('div');
-    disc2.classList.add('discs');
-    disc2.id = 'disc2';
-    torre1.appendChild(disc2);
-
-let disc1 = document.createElement('div');
-    disc1.classList.add('discs');
-    disc1.id = 'disc1';
-    torre1.appendChild(disc1);
 
 let discoAtual
 let discoWidth1
@@ -107,6 +108,18 @@ function verificarVitoria() {
     }
 }
 
+let hideBtn = document.getElementById('play');
+hideBtn.style.display = 'none';
+
+let resetBtn = document.getElementById('reset');
+resetBtn.style.display = 'flex';
+resetBtn.style.alignSelf = "flex-end";
+
+}
+
+let btn = document.getElementById('play')
+btn.addEventListener('click', game);
+
 function desligar() {
     let rickRoll = document.querySelector(".victory")
     let video = document.querySelector("video")
@@ -115,3 +128,4 @@ function desligar() {
     video.currentTime = 0;
     document.location.reload()
 }
+

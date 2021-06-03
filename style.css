@@ -2,43 +2,111 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-@media screen and (min-width: 800px) {
-    body {
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        background-color: lemonchiffon;
-    }
-    header {
-        width: 100%;
-        margin: 0;
-        background-color: blueviolet;
-    }
-    h1 {
-        text-align: center;
-        color: cornsilk;
-    }
-    button#play {
-        margin-top: 120px;
-        align-self: center;
-        font-size: 20px;
-        width: 150px;
-        height: 60px;
-        background-color: blueviolet;
-        color: white;
-        border: none;
-        border-radius: 15px;
-    }
-    button#play:hover {
-        background-color: magenta;
-    }
+body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: lemonchiffon;
+}
+header {
+    width: 100%;
+    margin: 0;
+    background-color: blueviolet;
+}
+h1 {
+    text-align: center;
+    color: cornsilk;
+}
+button#play {
+    margin-top: 120px;
+    align-self: center;
+    font-size: 20px;
+    width: 150px;
+    height: 60px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 15px;
+}
+button#play:hover {
+    background-color: magenta;
+}
+img#reset {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 5%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+img#reset:hover {
+    background-color: lightyellow;
+}
+.largeContainer {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.towers {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 60%;
+    height: 150px;
+    border-radius: 10%;
+    align-items: center;
+    margin-top: 40px;
+    background-color: lightgray;
+}
+
+.towers:hover {
+    background-color: lightyellow;}
+
+.discs {
+    border-radius: 25px;
+}
+.discs:hover {
+    border: solid 1px white;
+
+}
+
+#disc4 {
+    background-color: rgb(107, 68, 235);
+    width: 60%;
+    height: 12%;
+}
+#disc3 {
+    background-color: slategray;
+    width: 45%;
+    height: 12%;
+}
+#disc2 {
+    background-color: palevioletred;
+    width: 35%;
+    height: 12%;
+}
+#disc1 {
+    background-color: peachpuff;
+    width: 20%;
+    height: 12%;
+}
+
+
+@media (min-width: 428px) {
+    
     img#reset {
         display: none;
         width: 40px;
         height: 40px;
-        margin: 30px;
+        margin: 0 auto;
+        margin-top: 5%;
         padding: 5px 10px;
         border-radius: 10px;
         background-color: lightgray;
@@ -46,11 +114,79 @@ html {
     img#reset:hover {
         background-color: lightyellow;
     }
-    .container {
+    .largeContainer {
+        
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        /* height: 300px; */
+        height: 300px;
+        width: 100%;
+    }
+    .towers {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 28%;
+        height: 150px;
+        border-radius: 10%;
+        align-items: center;
+        margin-top: 40px;
+        background-color: lightgray;
+    }
+
+    .towers:hover {
+        background-color: lightyellow;}
+
+    .discs {
+        border-radius: 25px;
+    }
+    .discs:hover {
+        border: solid 1px white;
+
+    }
+
+    #disc4 {
+        background-color: rgb(107, 68, 235);
+        width: 60%;
+        height: 12%;
+    }
+    #disc3 {
+        background-color: slategray;
+        width: 40%;
+        height: 10%;
+    }
+    #disc2 {
+        background-color: palevioletred;
+        width: 30%;
+        height: 10%;
+    }
+    #disc1 {
+        background-color: peachpuff;
+        width: 20%;
+        height: 10%;
+    }
+}
+
+@media (min-width: 768px) {
+    
+    img#reset {
+        display: none;
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        margin-top: 5%;
+        padding: 5px 10px;
+        border-radius: 10px;
+        background-color: lightgray;
+    }
+    img#reset:hover {
+        background-color: lightyellow;
+    }
+    .largeContainer {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 300px;
         width: 100%;
     }
     .towers {
@@ -63,9 +199,18 @@ html {
         margin-top: 40px;
         background-color: lightgray;
     }
+
+    .towers:hover {
+        background-color: lightyellow;}
+
     .discs {
         border-radius: 25px;
     }
+    .discs:hover {
+        border: solid 1px white;
+
+    }
+
     #disc4 {
         background-color: rgb(107, 68, 235);
         width: 90%;
@@ -126,27 +271,3 @@ html {
     color: white;
     text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
