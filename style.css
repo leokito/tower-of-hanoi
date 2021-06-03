@@ -3,20 +3,32 @@ body {
     flex-direction: column;
 }
 
-.container {
+.largeContainer {
     display: flex;
     flex-direction: row;
     height: 300px;
     width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.tower {
+header {
+    text-align: center;
+}
+
+.towers {
     display: flex;
     flex-direction: column-reverse;
     width: 25%;
+    height: 70%;
     align-items: center;
     border: solid black 2px;
     margin-left: 2%;
+}
+#disc4 {
+    background-color: black;
+    width: 120px;
+    height: 20px;
 }
 
 #disc3 {
