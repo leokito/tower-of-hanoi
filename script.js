@@ -129,3 +129,7 @@ function desligar() {
     document.location.reload()
 }
 
+let resBtn = document.getElementById('reset')
+resBtn.addEventListener('click', function() {
+    document.location.reload()
+});

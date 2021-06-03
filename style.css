@@ -24,6 +24,7 @@ button#play {
     font-size: 20px;
     width: 150px;
     height: 60px;
+    margin: 0 auto;
     background-color: blueviolet;
     color: white;
     border: none;
@@ -192,7 +193,7 @@ img#reset:hover {
     .towers {
         display: flex;
         flex-direction: column-reverse;
-        width: 30%;
+        width: 28%;
         height: 300px;
         border-radius: 10%;
         align-items: center;
